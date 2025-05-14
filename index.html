@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGGELOS.UV - Amateur Photographer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --text: #1e1e1e;
+      --accent: #7f5af0;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      border-color: var(--accent);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact {
+      max-width: 500px;
+      margin: 3rem auto;
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input, .contact textarea {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      padding: 0.8rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background: #6848d2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AGGELOS.UV</h1>
+    <p>Amateur Photographer</p>
+  </header>
+  <nav>
+    <a href="#concerts">Concerts</a>
+    <a href="#street">Street</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="concerts">
+    <h2 style="text-align:center; margin-top:2rem;">Concerts</h2>
+    <div class="gallery">
+      <img src="images/concerts/photo1.jpg" alt="Concert 1" />
+      <img src="images/concerts/photo2.jpg" alt="Concert 2" />
+    </div>
+  </section>
+
+  <section id="street">
+    <h2 style="text-align:center; margin-top:2rem;">Street</h2>
+    <div class="gallery">
+      <img src="images/street/photo1.jpg" alt="Street 1" />
+      <img src="images/street/photo2.jpg" alt="Street 2" />
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 style="text-align:center; margin-bottom:1rem;">Contact</h2>
+    <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" rows="5" placeholder="Your message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p style="text-align:center; margin-top:1rem;">
+      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">Follow me on Instagram</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 AGGELOS.UV — All rights reserved.
+  </footer>
+</body>
+</html>
